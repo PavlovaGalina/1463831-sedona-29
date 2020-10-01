@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("PT Sans"), local("PTSans"),
+    url("C:\Users\1\Documents\GitHub\1463831-sedona-29\fonts\PTSans.woff2") format(woff2),
+    url("C:\Users\1\Documents\GitHub\1463831-sedona-29\fonts\PTSans.woff") format(woff);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Sans"), local("PTSans-Bold"),
+    url("C:\Users\1\Documents\GitHub\1463831-sedona-29\fonts\PTSans-Bold.woff2") format(woff2),
+    url("C:\Users\1\Documents\GitHub\1463831-sedona-29\fonts\PTSans-Bold.woff") format(woff);
+}
+
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-blue: #81B3D2;
+  --basic-grey: #EEEEEE;
+  --basic-brown: #766357;
+  --main-grey: #F2F2F2;
+}
+
+/* Global */
+
+body {
+  min-width: 1220px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--main-grey);
+  background-image: url("#");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.page a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main navigation */
+.main-header {
+  background-color: var(--basic-white);
+}
+
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-black);
+  background-color: transparent;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover{
+  color: var(--basic-blue);
+}
+
+.site-navigation a:focus {
+  color: var(--basic-black);
+}
+
+/* Добавить состояние при нахождении на странице */
+
+.visually-hidden{
+  display: none;
+}
+
+.container {
+  background-color: var(--basic-white);
+}
+
+.reasons-section {
+  background-color: var(--basic-white);
+}
+
+.reasons-list {
+  background-color: var(--basic-grey);
+}
+
+.reasons{
+  text-align: center;
+}
+
+.reasons h2 {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.reasons p {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.reasons-section p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.reasons-section h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.primary-reason {
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+}
+
+.recommendations-list {
+  list-style: none;
+}
+
+.reasons-list {
+  list-style: none;
+}
+
+.primary-reason-image {
+  background-color: var(--basic-brown);
+}
+
+.hotel-search h2 {
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.hotel-search p {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.map {
+  background-color: var(--basic-grey);
+}
+
+/* Button */
+
+.search-button {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--basic-blue);
+  border: none;
+}
+
+/* Main footer */
+
+.main-footer {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.footer-contacts{
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.footer-contacts a {
+  color: var(--basic-black);
+  text-decoration: none;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.social-button {
+  color: var(--basic-blue);
+}
+
+.footer-copyright {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--basic-black);
+}
