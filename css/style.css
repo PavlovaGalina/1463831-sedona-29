@@ -3,8 +3,8 @@
   font-style: normal;
   font-weight: 400;
   src: local("PT Sans"), local("PTSans"),
-    url("fonts\PTSans-Bold.woff") format(woff2),
-    url("fonts\PTSans-Bold.woff2") format(woff);
+    url("../fonts/PTSans-Bold.woff2") format("woff2"),
+    url("../fonts/PTSans-Bold.woff") format("woff");
   font-display: swap;
 }
 
@@ -12,9 +12,9 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: local("PT Sans"), local("PTSans-Bold"),
-    url("fonts\PTSans-Bold.woff") format(woff2),
-    url("fonts\PTSans-Bold.woff2") format(woff);
+  src: local("PT Sans Bold"), local("PTSans-Bold"),
+    url("../fonts/PTSans-Bold.woff2") format("woff2"),
+    url("../fonts/PTSans-Bold.woff") format("woff");
 }
 
 /* Variables */
@@ -58,6 +58,19 @@ img {
   height: auto;
 }
 
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
 /* Main navigation */
 .main-header {
   background-color: var(--basic-white);
@@ -95,6 +108,7 @@ img {
 }
 
 .container {
+  max-width: 1200px;
   background-color: var(--basic-white);
 }
 
@@ -128,6 +142,20 @@ img {
   font-weight: 700;
 }
 
+.first-reason {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 0;
+  padding: 0;
+}
+
+.second-reason {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 0;
+  padding: 0;
+}
+
 .primary-reason {
   color: var(--basic-white);
   background-color: var(--basic-blue);
@@ -138,6 +166,10 @@ img {
 }
 
 .recommendations-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -146,6 +178,10 @@ img {
 }
 
 .reasons-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -170,19 +206,34 @@ img {
   font-weight: 400;
 }
 
-.modal h2 {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-  color: var(--basic-white);
-  background-color: var(--basic-brown);
-}
-
 .map {
   background-color: var(--basic-grey);
 }
 
-/* Button */
+/* Modal button */
+
+.modal-button {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--basic-brown);
+  border: none;
+}
+
+.modal-button:hover{
+  background-color: var(--special-darker-brown);
+}
+
+.modal-button:active {
+  background-color: var(--special-dark-brown);
+  color: var(--special-white);
+}
+
+/* Search button */
 
 .search-button {
   font-size: 21px;
@@ -208,6 +259,10 @@ img {
 /* Main footer */
 
 .main-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
   color: var(--basic-black);
   background-color: var(--basic-white);
   background-position: 0 0;
@@ -219,6 +274,7 @@ img {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  text-align: center;
 }
 
 .footer-contacts a {
@@ -251,6 +307,7 @@ img {
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
+  text-align: center;
   color: var(--basic-black);
 }
 
