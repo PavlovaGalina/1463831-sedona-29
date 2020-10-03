@@ -102,7 +102,9 @@ img {
   opacity: 0.3;
 }
 
-/* Добавить состояние при нахождении на странице */
+.link-current a {
+  color: var(--basic-brown);
+}
 
 .visually-hidden{
   display: none;
@@ -213,10 +215,21 @@ img {
 
 /* Buttons */
 
-.modal-button,
-.reservation-button {
+.modal-button {
   font-size: 21px;
   line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--basic-brown);
+  border: none;
+}
+
+.reservation-button {
+  font-size: 14px;
+  line-height: 21px;
   font-weight: 700;
   text-align: center;
   color: var(--basic-white);
@@ -237,10 +250,21 @@ img {
   color: var(--special-white);
 }
 
-.search-button,
-.learn-more-button {
+.search-button {
   font-size: 21px;
   line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--basic-blue);
+  border: none;
+}
+
+.learn-more-button {
+  font-size: 14px;
+  line-height: 21px;
   font-weight: 700;
   text-align: center;
   color: var(--basic-white);
@@ -262,10 +286,6 @@ img {
 }
 
 /* Hotels */
-
-.hotels-link a {
-  color: var(--basic-brown);
-}
 
 .hotels h3 {
   font-size: 21px;
@@ -298,6 +318,12 @@ img {
 .sort-list a:active {
   color: var(--basic-black);
   opacity: 1;
+}
+
+.sort-current a {
+  color: var(--basic-blue);
+  opacity: 1;
+  border: none;
 }
 
 .hotels-list {
