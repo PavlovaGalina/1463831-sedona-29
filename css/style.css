@@ -3,8 +3,8 @@
   font-style: normal;
   font-weight: 400;
   src: local("PT Sans"), local("PTSans"),
-    url("../fonts/PTSans-Bold.woff2") format("woff2"),
-    url("../fonts/PTSans-Bold.woff") format("woff");
+    url("../fonts/PTSans.woff2") format("woff2"),
+    url("../fonts/PTSans.woff") format("woff");
   font-display: swap;
 }
 
