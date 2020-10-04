@@ -59,8 +59,6 @@ img {
   height: auto;
 }
 
-/* Grid */
-
 .page {
   height: 100%;
 }
@@ -74,6 +72,8 @@ img {
 
 /* Main navigation */
 .main-header {
+  width: 1200px;
+  margin: 0 auto;
   background-color: var(--basic-white);
 }
 
@@ -106,13 +106,26 @@ img {
   color: var(--basic-brown);
 }
 
+/* Main content */
+
 .visually-hidden{
   display: none;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
   background-color: var(--basic-white);
+}
+
+.background {
+  position: relative;
+}
+
+.welcome {
+  position: absolute;
+  top: 50%;
+  left: 410px;
 }
 
 .reasons-section {
@@ -124,6 +137,7 @@ img {
 }
 
 .reasons {
+  height: 216px;
   text-align: center;
 }
 
@@ -131,6 +145,8 @@ img {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  padding-top: 42.5px;
+  padding-bottom: 16.5px;
 }
 
 .reasons-section p {
@@ -160,8 +176,14 @@ img {
 }
 
 .primary-reason {
+  padding-left: 45px;
+  padding-right: 45px;
   color: var(--basic-white);
   background-color: var(--basic-blue);
+}
+
+.primary-reason-image {
+  background-color: var(--basic-brown);
 }
 
 .reasons-item {
@@ -186,10 +208,6 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.primary-reason-image {
-  background-color: var(--basic-brown);
 }
 
 .hotel-search {
@@ -330,6 +348,11 @@ img {
   list-style: none;
 }
 
+.hotels-item {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+}
+
  .rating {
    color: var(--basic-dark-grey);
    background-color: var(--main-grey);
@@ -338,14 +361,13 @@ img {
 /* Main footer */
 
 .main-footer {
+  width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 0;
   padding: 0;
   color: var(--basic-black);
   background-color: var(--basic-white);
-  background-position: 0 0;
-  background-repeat: repeat;
 }
 
 .footer-contacts h3,
