@@ -86,11 +86,29 @@ img {
   background-color: transparent;
 }
 
+.main-header-logo {
+  position: absolute;
+  z-index: 1;
+}
+
+.main-header-logo img {
+  width: 138px;
+  height: 70px;
+  padding-left: 531px;
+}
+
 .site-navigation {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 15px 72px;
   margin: 0;
+  text-align: left;
   list-style: none;
+}
+
+.menu-item {
+  text-align: right;
 }
 
 .site-navigation a {
