@@ -71,6 +71,7 @@ img {
 }
 
 /* Main navigation */
+
 .main-header {
   width: 1200px;
   margin: 0 auto;
@@ -86,6 +87,9 @@ img {
 }
 
 .site-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0;
   list-style: none;
 }
 
