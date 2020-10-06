@@ -89,12 +89,12 @@ img {
 .main-header-logo {
   position: absolute;
   z-index: 1;
+  left: 600px;
 }
 
 .main-header-logo img {
   width: 138px;
   height: 70px;
-  padding-left: 531px;
 }
 
 .site-navigation {
