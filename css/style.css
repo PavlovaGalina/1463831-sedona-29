@@ -220,7 +220,6 @@ img {
 
 .recommendations-list {
   display: flex;
-  align-content: stretch;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -233,7 +232,6 @@ img {
 
 .reasons-list {
   display: flex;
-  align-content: stretch;
   margin: 0;
   padding: 0;
   list-style: none;
