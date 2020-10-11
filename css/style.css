@@ -100,12 +100,15 @@ img {
 
 .site-navigation {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
   padding: 15px 72px;
   margin: 0;
   text-align: left;
   list-style: none;
+}
+
+.site-navigation li {
+  flex: 1;
 }
 
 .menu-item {
@@ -151,7 +154,7 @@ img {
 }
 
 .welcome-to-sedona img {
-  margin-top: 77px;
+  padding-top: 77px;
 }
 
 .reasons-section {
@@ -171,6 +174,7 @@ img {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  margin: 0;
   padding-top: 42.5px;
   padding-bottom: 16.5px;
 }
@@ -179,6 +183,7 @@ img {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  margin: 0;
 }
 
 .reasons-section h3 {
@@ -220,7 +225,6 @@ img {
 
 .recommendations-list {
   display: flex;
-  align-content: stretch;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -233,7 +237,6 @@ img {
 
 .reasons-list {
   display: flex;
-  align-content: stretch;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -355,31 +358,37 @@ img {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  padding-right: 46px;
+  margin-right: 46px;
 }
 
 .sort {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
-  display: grid;
-  grid-template-columns: max-content 1fr max-content;
-  padding: 0 73px;
+  display: flex;
   align-items: center;
+  padding: 0 73px;
 }
 
 .sort-section {
-  width: 355px;
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  margin-right: auto;
+}
+
+.sort-section span {
+  margin-right: 40px;
 }
 
 .sort-list {
-  width: 240px;
   display: flex;
-  justify-content: space-between;
+  align-items: baseline;
   list-style: none;
+  padding: 0;
+}
+
+.sort-list li {
+  margin-right: 30px;
 }
 
 .sort-list a {
@@ -388,7 +397,7 @@ img {
   border-bottom: 1px dashed var(--basic-blue);
 }
 
-.sort-list a:hover{
+.sort-list a:hover {
   color: var(--basic-blue);
   opacity: 1;
   border-bottom: 1px dashed;
@@ -430,9 +439,10 @@ img {
   border-right: none;
 }
 
-.hotels-item+img {
+.hotels-image {
   width: 135px;
   height: 90px;
+  margin-right: 29px;
 }
 
 .hotels-action {
@@ -448,14 +458,13 @@ img {
 .hotels-description {
   display: grid;
   grid-template-rows: max-content 1fr max-content;
-  padding-left: 29px;
 }
 
 .rating-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  text-align:right;
+  text-align: right;
 }
 
 .rating {
@@ -492,7 +501,7 @@ img {
 }
 
 .footer-social {
-  margin: 0 125px;
+  padding: 0 125px;
 }
 
 .social-list {
