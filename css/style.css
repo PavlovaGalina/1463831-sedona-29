@@ -64,11 +64,14 @@ img {
   height: 100%;
 }
 
-.page-body {
+.page-wrapper {
+  width: 1200px;
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
 .visually-hidden {
@@ -88,9 +91,7 @@ img {
 
 .main-header {
   width: 1200px;
-  margin: 0 auto;
   background-color: var(--basic-white);
-  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .main-navigation {
@@ -172,13 +173,13 @@ img {
   width: 1200px;
   margin: 0 auto;
   background-color: var(--basic-white);
-  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .welcome-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
-  height: 509px;
+  height: 508px;
   background-image: url(../img/background-photo.jpg);
   background-position: top;
   background-repeat: no-repeat;
@@ -193,8 +194,16 @@ img {
   align-self: center;
 }
 
-.welcome-to-sedona {
-  clip-path: polygon(0px 452px, 250px 476px, 250px 452px, 600px 509px, 950px 452px, 950px 476px, 1200px 452px, 1200px 0px, 0px 0px);
+.welcome-to-sedona::after {
+  content: "  ";
+  position: absolute;
+  top: 508px;
+  left: auto;
+  width: 100%;
+  height: 57px;
+  background-image: url(../img/Background-shape.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .reasons-section {
@@ -574,6 +583,10 @@ img {
   border: none;
 }
 
+.up {
+  margin-right: 10px;
+}
+
 .hotels-list {
   padding: 0;
   margin: 0;
@@ -660,7 +673,6 @@ img {
   background-image: url(../img/map.png) transparent;
   background-repeat: no-repeat;
   background-position: bottom;
-  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .footer-contacts {
