@@ -11,13 +11,13 @@
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo" href="#">
-          <img src="img/logo.svg" width="138" height="70" alt="Город Седона">
+          <img src="img/logo.svg" width="138" height="70" alt="Логотип Седона">
         </a>
         <ul class="site-navigation">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li class="menu-item"><a href="#">Карта штата</a></li>
-          <li class="menu-item"><a href="hotels.html">Гостиницы</a></li>
+          <li class="menu-first-item"><a href="#">Информация</a></li>
+          <li class="menu-second-item"><a href="#">Фото и видео</a></li>
+          <li class="menu-third-item"><a href="#">Карта штата</a></li>
+          <li class="menu-fourth-item"><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -26,8 +26,7 @@
       <section class="welcome-to-sedona">
         <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
           <div class="welcome-wrapper">
-            <img class="welcome" src="img/welcome.svg" width="456" height="350">
-            <img class="background-shape" src="img/background-shape.svg" width="1200" height="57">
+            <img class="welcome" src="img/welcome.svg" width="456" height="350" alt="Добро пожаловать в Седону!">
           </div>
       </section>
       <section class="reasons-section">
@@ -39,8 +38,8 @@
         <div class="first-reason">
           <div class="reasons-item primary-reason">
             <h3>Настоящий городок</h3>
-              <p>— №1 —</p>
-              <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+              <p class="reason-number">— №1 —</p>
+              <p class="reason-description">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
           <div class="primary-reason-image">
             <img src="img/first-reason.jpg" width="800" height="256" alt="Седона">
@@ -71,7 +70,7 @@
           </div>
           <div class="reasons-item primary-reason">
             <h3>Там есть Мост дьявола</h3>
-            <p>— №2 —</p>
+            <p class="reason-number">— №2 —</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
         </div>
@@ -79,17 +78,17 @@
           <ul class="reasons-list">
             <li class="reasons-item another-reason">
               <h3 >небольшая площадь</h3>
-              <p>— №3 —</p>
+              <p class="reason-number">— №3 —</p>
               <p>все достопримечательности находятся очень близко</p>
             </li>
             <li class="reasons-item another-reason">
               <h3>красивая дорога</h3>
-              <p>— №4 —</p>
+              <p class="reason-number">— №4 —</p>
               <p>ехать в седону из лас-вегаса совсем не скучно!</p>
             </li>
             <li class="reasons-item another-reason">
               <h3>мало туристов</h3>
-              <p>— №5 —</p>
+              <p class="reason-number">— №5 —</p>
               <p>большинство едет в гранд каньон и толпится там</p>
             </li>
           </ul>
@@ -98,16 +97,41 @@
       <section class="hotel-search">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,<br>
-           и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <button class="modal-button" type="button">Поиск гостиницы в Седоне</button>
         <div class="modal">
-             <button class="modal-button" type="button">Поиск гостиницы в Седоне</button>
-             <!-- Здесь будет форма поиска гостиницы -->
-             <button class="search-button" type="button">Найти</button>
+          <form class="hotel-search-form" action="https://echo.htmlacademy.ru/courses" method="get">
+            <p class="date-form">
+              <label for="date">Дата заезда:</label>
+              <input class="date-form" id="name" name="date" type="date">
+            </p>
+            <p class="date-form">
+              <label for="date">Дата выезда:</label>
+              <input class="date-form" id="name" name="date" type="date">
+            </p>
+            <div class="people-number">
+              <label for="text">Взрослые:</label>
+              <div class="people-number-wrapper">
+                <p>-</p>
+                <input type="text" value="2"/>
+                <p>+</p>
+              </div>
+            </div>
+            <div>
+              <label for="text">Дети:</label>
+              <div class="people-number-wrapper">
+                <p>-</p>
+                <input type="text" value="0"/>
+                <p>+</p>
+              </div>
+            </div>
+          </form>
+          <button class="search-button" type="button">Найти</button>
         </div>
       </section>
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <img src="img/map.png" width="1199" height="594" alt="Карта">
+        <img src="img/map.png" width="1199" height="473" alt="Карта">
       </section>
     </main>
 
