@@ -34,7 +34,9 @@
   --special-dark-brown: #503E33;
   --special-white: rgba(255, 255, 255, 0.3);
   --special-grey: #E5E5E5;
+  --special-grey-input: #EBEBEB;
   --special-grey-sort: #CACACA;
+  --special-grey-search: #A9A9A9;
 }
 
 /* Global */
@@ -180,17 +182,17 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 508px;
   background-image: url(../img/background-photo.jpg);
   background-position: top;
   background-repeat: no-repeat;
   text-align: center;
+  padding-top: 76px;
+  padding-bottom: 82px;
 }
 
 .welcome {
   width: 456px;
   height: 350px;
-  padding-top: 77px;
   align-self: center;
 }
 
@@ -216,9 +218,9 @@ img {
 }
 
 .reasons {
-  height: 172px;
   text-align: center;
   padding-top: 43px;
+  padding-bottom: 52px;
 }
 
 .reasons p {
@@ -361,7 +363,6 @@ img {
 
 .modal {
   width: 458px;
-  height: 285px;
   position: absolute;
   background-color: var(--basic-white);
   margin-left: auto;
@@ -391,7 +392,7 @@ img {
 
 .hotel-search-form {
   width: 458px;
-  height: 173px;
+  min-height: 173px;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
@@ -405,7 +406,17 @@ img {
   padding: 6px 13px;
   padding-right: 8px;
   border: none;
-  outline:none;
+  outline: none;
+}
+
+.date-form-wrapper input[type="text"]:hover {
+  background-color: var(--special-grey-input);
+}
+
+.date-form-wrapper input[type="text"]:focus {
+  background-color: var(--basic-white);
+  outline: 2px solid var(--special-grey);
+  outline-offset: -2px;
 }
 
 .people-number,
@@ -417,19 +428,24 @@ img {
   align-items: center;
 }
 
+.adults-label {
+  margin-right: 13px;
+}
+
+.adults {
+  margin-right: 25px;
+}
+
 .date-form-wrapper {
   position: relative;
 }
 
-.date-form-wrapper::after {
-  content: "  ";
+.calendar {
   position: absolute;
   left: 430px;
   width: 21px;
   height: 23px;
-  background-image: url(../img/calendar.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  right: 0;
 }
 
 .people-number input[type="number"] {
@@ -442,7 +458,7 @@ img {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 .people-number-wrapper {
@@ -455,6 +471,24 @@ input::-webkit-inner-spin-button {
   background-color: var(--main-grey);
 }
 
+.calendar path,
+.plus path,
+.minus rect {
+  fill: var(--special-grey-search);
+}
+
+.calendar:hover path,
+.plus:hover path,
+.minus:hover rect {
+  fill: var(--basic-black);
+}
+
+.calendar:active path,
+.plus:active path,
+.minus:active rect {
+  fill: var(--basic-blue);
+}
+
 .map {
   height: 473px;
   background-color: var(--basic-grey);
@@ -464,7 +498,6 @@ input::-webkit-inner-spin-button {
 
 .modal-button {
   width: 568px;
-  height: 86px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -503,7 +536,6 @@ input::-webkit-inner-spin-button {
 
 .search-button {
   width: 458px;
-  height: 58px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
