@@ -101,29 +101,27 @@
             и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <button class="modal-button" type="button">Поиск гостиницы в Седоне</button>
           <div class="modal">
-            <form class="hotel-search-form" action="https://echo.htmlacademy.ru/courses" method="get">
-              <p class="date-form">
-                <label for="date">Дата заезда:</label>
-                <input class="date-form" id="name" name="date" type="date">
+            <form class="hotel-search-form" method="post">
+              <p class="date-form-wrapper">
+                <label for="arrival-date">Дата заезда:</label>
+                <input class="date-form" id="arrival-date" name="arrival-date" type="text" value="24 апреля 2017">
               </p>
-              <p class="date-form">
-                <label for="date">Дата выезда:</label>
-                <input class="date-form" id="name" name="date" type="date">
+              <p class="date-form-wrapper">
+                <label for="leaving-date">Дата выезда:</label>
+                <input class="date-form" id="leaving-date" name="leaving-date" type="text" value="4 июля 2017">
               </p>
               <div class="people-number">
-                <label for="text">Взрослые:</label>
+                <label for="adults">Взрослые:</label>
                 <div class="people-number-wrapper">
-                  <p>-</p>
-                  <input type="text" value="2"/>
-                  <p>+</p>
+                  <img src="img/minus.svg" width="12" height="3">
+                  <input id="adults" name="adults-number" type="number" value="2" min="0">
+                  <img src="img/plus.svg" width="12" height="12">
                 </div>
-              </div>
-              <div>
-                <label for="text">Дети:</label>
+                <label for="children">Дети:</label>
                 <div class="people-number-wrapper">
-                  <p>-</p>
-                  <input type="text" value="0"/>
-                  <p>+</p>
+                  <img src="img/minus.svg" width="12" height="3">
+                  <input id="children" name="children-number" type="number" value="0" min="0">
+                  <img src="img/plus.svg" width="12" height="12">
                 </div>
               </div>
             </form>

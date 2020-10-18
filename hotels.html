@@ -11,7 +11,7 @@
     <div class="page-wrapper">
       <header class="main-header">
         <nav class="main-navigation">
-          <a class="main-header-logo" href="#">
+          <a class="main-header-logo" href="index.html">
             <img src="img/logo.svg" width="138" height="70" alt="Город Седона">
           </a>
           <ul class="site-navigation">
@@ -25,8 +25,45 @@
 
       <main class="container">
         <section class="filters-section">
-          <div class="filters">
+          <div class="background-blur"></div>
+          <div class="filters-wrapper">
             <h2 class="visually-hidden">Фильтр гостиниц</h2>
+            <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+              <fieldset>
+                <legend>Инфраструктура:</legend>
+                <ul>
+                  <li class="filter-option filter-checkbox">
+                    <input class="filter-input-checkbox filter-input" type="checkbox" name="pool" id="filter-pool" checked>
+                    <label for="filter-pool">Бассейн</label>
+                  </li>
+                  <li class="filter-option filter-checkbox">
+                    <input class="filter-input-checkbox filter-input" type="checkbox" name="parking" id="filter-parking">
+                    <label for="filter-parking">Парковка</label>
+                  </li>
+                  <li class="filter-option filter-checkbox">
+                    <input class="filter-input-checkbox filter-input" type="checkbox" name="wifi" id="filter-wifi">
+                    <label for="filter-wifi">Wi-fi</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset>
+                <legend>Тип жилья:</legend>
+                <ul>
+                  <li class="filter-option filter-checkbox">
+                    <input class="filter-input-checkbox filter-input" type="checkbox" name="hotel" id="filter-hotel" checked>
+                    <label for="filter-hotel">Гостиница</label>
+                  </li>
+                  <li class="filter-option filter-checkbox">
+                    <input class="filter-input-checkbox filter-input" type="checkbox" name="motel" id="filter-motel">
+                    <label for="filter-motel">Мотель</label>
+                  </li>
+                  <li class="filter-option filter-checkbox">
+                    <input class="filter-input-checkbox filter-input" type="checkbox" name="apartament" id="filter-apartament">
+                    <label for="filter-apartament">Апартаменты</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
           </div>
         </section>
         <section class="hotels">

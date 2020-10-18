@@ -107,7 +107,7 @@ img {
   position: absolute;
   width: 138px;
   height: 70px;
-  z-index: 1;
+  z-index: 3;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -183,7 +183,6 @@ img {
   background-image: url(../img/background-photo.jpg);
   background-position: top;
   background-repeat: no-repeat;
-  mask-image: url(../img/background-shape.svg);
   text-align: center;
 }
 
@@ -194,10 +193,11 @@ img {
   align-self: center;
 }
 
-.welcome-to-sedona::after {
+.welcome-wrapper::after {
   content: "  ";
   position: absolute;
-  top: 508px;
+  bottom: 0;
+  left: 0;
   left: auto;
   width: 100%;
   height: 57px;
@@ -371,12 +371,21 @@ img {
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
-.modal p {
+.modal p,
+.hotel-search-form,
+.date-form-wrapper input[value],
+.people-number-wrapper input[value] {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
+  text-transform: uppercase;
+  color: var(--basic-black);
   margin: 0;
   padding: 0;
+}
+
+.people-number-wrapper input[value] {
+  text-align: center;
 }
 
 .hotel-search-form {
@@ -388,15 +397,18 @@ img {
   margin-bottom: 54px;
 }
 
-.date-form input[type="date"] {
-  width: 346px;
-  height: 38px;
+.date-form-wrapper input[type="text"] {
+  width: 325px;
+  height: 26px;
   background-color: var(--main-grey);
+  padding: 6px 13px;
+  padding-right: 8px;
   border: none;
+  outline:none;
 }
 
 .people-number,
-.date-form {
+.date-form-wrapper {
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
@@ -404,19 +416,41 @@ img {
   align-items: center;
 }
 
-.people-number input[type="text"] {
+.date-form-wrapper {
+  position: relative;
+}
+
+.date-form-wrapper::after {
+  content: "  ";
+  position: absolute;
+  left: 430px;
+  width: 21px;
+  height: 23px;
+  background-image: url(../img/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.people-number input[type="number"] {
   width: 36px;
   height: 26px;
   background-color: var(--main-grey);
   border: none;
+  outline:none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .people-number-wrapper {
-  width: 114px;
-  height: 38px;
+  width: 88px;
+  height: 26px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 6px 13px;
   background-color: var(--main-grey);
 }
 
@@ -506,16 +540,35 @@ img {
 
 /* Hotels */
 
-.filters {
+.filters-section {
+  position: relative;
   height: 217px;
+  overflow: hidden;
+}
+
+.filters-wrapper {
+  position: absolute;
+  height: 160px;
+  width: 1056px;
+  padding: 26px 72px;
+  padding-bottom: 31px;
+  z-index: 2;
+}
+
+.background-blur {
+  position: absolute;
+  height: 217px;
+  width: 1200px;
+  z-index: 1;
   background-image: url(../img/background-photo.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   filter: blur(5px);
 }
 
-.filters-section {
-  overflow: hidden;
+.filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .hotels h3 {
@@ -604,7 +657,7 @@ img {
 }
 
 .hotels-item {
-  height: 90px;
+  height: 89px;
   display: grid;
   grid-template-columns: max-content 1fr max-content;
   padding: 30px 73px;
