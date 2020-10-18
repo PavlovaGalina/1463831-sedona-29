@@ -34,6 +34,7 @@
   --special-dark-brown: #503E33;
   --special-white: rgba(255, 255, 255, 0.3);
   --special-grey: #E5E5E5;
+  --special-grey-sort: #CACACA;
 }
 
 /* Global */
@@ -548,7 +549,6 @@ input::-webkit-inner-spin-button {
 
 .filters-wrapper {
   position: absolute;
-  height: 160px;
   width: 1056px;
   padding: 26px 72px;
   padding-bottom: 31px;
@@ -578,7 +578,6 @@ input::-webkit-inner-spin-button {
 }
 
 .sort {
-  height: 26px;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -633,6 +632,22 @@ input::-webkit-inner-spin-button {
   opacity: 1;
 }
 
+.sort-direction a path {
+  fill: var(--special-grey-sort);
+}
+
+.sort-direction a:hover path {
+  fill: var(--basic-blue);
+}
+
+.sort-direction a:active path {
+  fill: var(--basic-black);
+}
+
+.current-direction svg path {
+  fill: var(--basic-blue);
+}
+
 .sort-current a {
   color: var(--basic-blue);
   opacity: 1;
@@ -659,15 +674,14 @@ input::-webkit-inner-spin-button {
 
 .hotels-list h3 {
   margin: 0;
-  line-height: 14px;
-  margin-bottom: 13px;
 }
 
 .hotels-item {
-  height: 89px;
   display: grid;
   grid-template-columns: max-content 1fr max-content;
-  padding: 30px 73px;
+  padding: 0 73px;
+  padding-top: 23px;
+  padding-bottom: 29px;
   border: 1px solid var(--special-grey);
   border-left: none;
   border-right: none;
@@ -677,6 +691,7 @@ input::-webkit-inner-spin-button {
   width: 135px;
   height: 90px;
   margin-right: 29px;
+  padding-top: 7px;
 }
 
 .price-wrapper {
@@ -693,6 +708,7 @@ input::-webkit-inner-spin-button {
   width: 256px;
   display: flex;
   justify-content: space-between;
+  align-self: flex-end;
 }
 
 .hotels-action button {
@@ -700,9 +716,9 @@ input::-webkit-inner-spin-button {
 }
 
 .hotels-description {
-  display: grid;
-  grid-template-rows: max-content 1fr max-content;
-  height: 90px;
+  max-width: 258px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .rating-container {
@@ -710,7 +726,7 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  height: 90px;
+  padding-top: 6px;
 }
 
 .rating-container img {
@@ -823,7 +839,7 @@ input::-webkit-inner-spin-button {
   margin-right: 8px;
 }
 
-.footer-copyright a {
+.footer-copyright a path{
   color: var(--basic-black);
 }
 
@@ -831,7 +847,7 @@ input::-webkit-inner-spin-button {
   fill: var(--basic-blue);
 }
 
-.footer-copyright a:active {
+.footer-copyright a:active path{
   color: var(--basic-black);
   opacity: 0.3;
 }
