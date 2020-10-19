@@ -37,6 +37,7 @@
   --special-grey-input: #EBEBEB;
   --special-grey-sort: #CACACA;
   --special-grey-search: #A9A9A9;
+  --special-grey-toggle: #ABABAB;
 }
 
 /* Global */
@@ -551,7 +552,7 @@ input::-webkit-inner-spin-button {
   text-transform: uppercase;
   background-color: var(--basic-blue);
   border: none;
-  outline:none;
+  outline: none;
   padding: 16px 185px;
 }
 
@@ -579,8 +580,7 @@ input::-webkit-inner-spin-button {
   color: var(--special-white);
 }
 
-
-/* Hotels */
+/* Hotels form */
 
 .filters-section {
   position: relative;
@@ -591,8 +591,8 @@ input::-webkit-inner-spin-button {
 .filters-wrapper {
   position: absolute;
   width: 1056px;
-  padding: 26px 72px;
-  padding-bottom: 31px;
+  padding: 26px 75px;
+  padding-bottom: 5px;
   z-index: 2;
 }
 
@@ -608,9 +608,191 @@ input::-webkit-inner-spin-button {
 }
 
 .filter {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
 }
+
+.infrastructure-filter {
+  margin: 0;
+  margin-right: 117px;
+}
+
+.hotel-type-filter {
+  margin-right: auto;
+}
+
+.filter-item {
+  max-width: 140px;
+  padding: 0;
+  border: none;
+}
+
+.filter-item ul {
+  list-style: none;
+  margin: 0;
+}
+
+.range-filter {
+  width: 317px;
+}
+
+.filter-item legend {
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--basic-white);
+  margin-bottom: 24px;
+}
+
+.filter-option {
+  margin-bottom: 26px;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 10%;
+  border: 2px solid var(--basic-white);
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/checked.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-option label,
+.price-controls label {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-white);
+}
+
+.filter-item-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-filter legend {
+  margin-bottom: 11px;
+}
+
+.price-controls {
+  position: relative;
+  display: flex;
+  width: 285px;
+  height: 24px;
+  border: 2px solid var(--basic-white);
+  margin: 0;
+  margin-bottom: 20px;
+  padding-top: 6px;
+  padding-bottom: 2px;
+  padding-left: 25px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  left: 157px;
+  top: 6px;
+  background-color: var(--basic-white);
+}
+
+.price-controls input {
+  width: 50px;
+  margin-left: 10px;
+  text-align: left;
+  color: var(--basic-white);
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+}
+
+.price-controls label {
+  flex: 1;
+  text-align: center;
+}
+
+.range-controls {
+  position: relative;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--special-white);
+  margin-bottom: 33px;
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: -10px;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--special-grey-toggle);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--special-grey-toggle);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 0px;
+}
+
+.range-controls .toggle-max {
+  left: 250px;
+}
+
+.show-button {
+  width: 135px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid var(--basic-white);
+  outline: none;
+  padding: 5px 35px;
+  margin-right: 10px;
+  align-self: center;
+}
+
+/* Hotels */
 
 .hotels h3 {
   font-size: 21px;
