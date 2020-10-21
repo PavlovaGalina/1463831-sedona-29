@@ -374,6 +374,11 @@ img {
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
 .hotel-search-form,
 .date-form-wrapper input[value],
 .people-number-wrapper input[value] {
@@ -584,21 +589,21 @@ input::-webkit-inner-spin-button {
 
 .filters-section {
   position: relative;
-  height: 217px;
+  min-height: 217px;
   overflow: hidden;
 }
 
 .filters-wrapper {
   position: absolute;
   width: 1056px;
-  padding: 26px 75px;
+  padding: 26px 73px;
   padding-bottom: 5px;
   z-index: 2;
 }
 
 .background-blur {
   position: absolute;
-  height: 217px;
+  min-height: 217px;
   width: 1200px;
   z-index: 1;
   background-image: url(../img/background-photo.jpg);
@@ -614,7 +619,7 @@ input::-webkit-inner-spin-button {
 
 .infrastructure-filter {
   margin: 0;
-  margin-right: 117px;
+  margin-right: 115px;
 }
 
 .hotel-type-filter {
@@ -629,7 +634,12 @@ input::-webkit-inner-spin-button {
 
 .filter-item ul {
   list-style: none;
+  padding: 0;
   margin: 0;
+}
+
+.filter-item li {
+  padding-left: 40px;
 }
 
 .range-filter {
@@ -659,22 +669,21 @@ input::-webkit-inner-spin-button {
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
-  left: -42px;
   top: 0;
-  width: 16px;
-  height: 16px;
-  border-radius: 10%;
-  border: 2px solid var(--basic-white);
+  left: -40px;
+  width: 23px;
+  height: 23px;
+  background-image: url(../img/checkbox-off.svg);
 }
 
-.filter-input-checkbox:checked + label::after {
+.filter-input-checkbox:checked + label::before {
   content: "";
   position: absolute;
   top: 0;
   left: -40px;
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/checked.svg);
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -700,14 +709,12 @@ input::-webkit-inner-spin-button {
 .price-controls {
   position: relative;
   display: flex;
-  width: 285px;
-  height: 24px;
+  width: 313px;
+  min-height: 30px;
   border: 2px solid var(--basic-white);
   margin: 0;
   margin-bottom: 20px;
-  padding-top: 6px;
   padding-bottom: 2px;
-  padding-left: 25px;
 }
 
 .price-controls::after {
@@ -722,10 +729,11 @@ input::-webkit-inner-spin-button {
 
 .price-controls input {
   width: 50px;
+  max-height: 21px;
   margin-left: 10px;
   text-align: left;
   color: var(--basic-white);
-  background: transparent;
+  background-color: transparent;
   border: none;
   outline: none;
   font-family: inherit;
@@ -735,7 +743,17 @@ input::-webkit-inner-spin-button {
 
 .price-controls label {
   flex: 1;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.min-price {
+  padding-left: 33px;
+}
+
+.max-price {
+  padding-left: 15px;
 }
 
 .range-controls {
@@ -749,30 +767,32 @@ input::-webkit-inner-spin-button {
 }
 
 .range-controls .bar {
-  width: 80%;
   height: 2px;
   background: var(--basic-white);
 }
 
 .range-controls .toggle {
   position: absolute;
-  top: -10px;
-  width: 4px;
-  height: 4px;
+  top: -9px;
+  width: 19px;
+  height: 19px;
   padding: 0;
-  border: 8px solid var(--basic-white);
-  background-color: var(--special-grey-toggle);
-  border-radius: 50%;
-  box-shadow: 0 2px 1px 0 var(--special-grey-toggle);
+  background-image: url(../img/range-control.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
-.range-controls .toggle-min {
-  left: 0px;
-}
-
-.range-controls .toggle-max {
-  left: 250px;
+.range-controls .toggle:hover {
+  position: absolute;
+  top: -10px;
+  width: 23px;
+  height: 22px;
+  padding: 0;
+  background-image: url(../img/range-control.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .show-button {
@@ -893,6 +913,7 @@ input::-webkit-inner-spin-button {
 
 .hotels-list p {
   margin: 0;
+  padding-bottom: 5px;
 }
 
 .hotels-list h3 {
@@ -904,10 +925,14 @@ input::-webkit-inner-spin-button {
   grid-template-columns: max-content 1fr max-content;
   padding: 0 73px;
   padding-top: 23px;
-  padding-bottom: 29px;
-  border: 1px solid var(--special-grey);
-  border-left: none;
-  border-right: none;
+  padding-bottom: 30px;
+  border-top: 1px solid var(--special-grey);
+  border-bottom: 1px solid var(--special-grey);
+}
+
+.hotels-item + .hotels-item {
+  border-bottom: 1px solid var(--special-grey);
+  border-top: none;
 }
 
 .hotels-image {
@@ -931,7 +956,6 @@ input::-webkit-inner-spin-button {
   width: 256px;
   display: flex;
   justify-content: space-between;
-  align-self: flex-end;
 }
 
 .hotels-action button {
@@ -941,7 +965,8 @@ input::-webkit-inner-spin-button {
 .hotels-description {
   max-width: 258px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .rating-container {

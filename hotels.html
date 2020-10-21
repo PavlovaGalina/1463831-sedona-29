@@ -18,7 +18,7 @@
             <li class="menu-first-item"><a href="#">Информация</a></li>
             <li class="menu-second-item"><a href="#">Фото и видео</a></li>
             <li class="menu-third-item"><a href="#">Карта штата</a></li>
-            <li class="menu-fourth-item"><a href="hotels.html">Гостиницы</a></li>
+            <li class="menu-fourth-item link-current"><a href="hotels.html">Гостиницы</a></li>
           </ul>
         </nav>
       </header>
@@ -33,15 +33,15 @@
                 <legend>Инфраструктура:</legend>
                 <ul>
                   <li class="filter-option filter-checkbox">
-                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="pool" id="filter-pool" checked>
+                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="pool" id="filter-pool" value="Бассейн" checked>
                     <label for="filter-pool">Бассейн</label>
                   </li>
                   <li class="filter-option filter-checkbox">
-                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="parking" id="filter-parking">
+                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="parking" id="filter-parking" value="Парковка">
                     <label for="filter-parking">Парковка</label>
                   </li>
                   <li class="filter-option filter-checkbox">
-                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="wifi" id="filter-wifi">
+                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="wifi" id="filter-wifi" value="Wi-fi">
                     <label for="filter-wifi">Wi-fi</label>
                   </li>
                 </ul>
@@ -50,15 +50,15 @@
                 <legend>Тип жилья:</legend>
                 <ul>
                   <li class="filter-option filter-checkbox">
-                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hotel" id="filter-hotel" checked>
+                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hotel" id="filter-hotel" value="Гостиница" checked>
                     <label for="filter-hotel">Гостиница</label>
                   </li>
                   <li class="filter-option filter-checkbox">
-                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="motel" id="filter-motel" checked>
+                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="motel" id="filter-motel" value="Мотель" checked>
                     <label for="filter-motel">Мотель</label>
                   </li>
                   <li class="filter-option filter-checkbox">
-                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="apartament" id="filter-apartament" checked>
+                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="apartament" id="filter-apartament" value="Апартаменты" checked>
                     <label for="filter-apartament">Апартаменты</label>
                   </li>
                 </ul>
@@ -69,18 +69,18 @@
                   <div class="range-filter">
                     <div class="price-controls">
                       <label class="min-price">
-                        от <input type="number" name="min-price" value="0">
+                      от <input type="number" name="min-price" value="0">
                       </label>
                       <label class="max-price">
-                        до <input type="number" name="max-price" value="3000">
+                      до <input type="number" name="max-price" value="3000">
                       </label>
                     </div>
                     <div class="range-controls">
                       <div class="scale">
-                        <div class="bar"></div>
+                        <div class="bar" style="width: 80%"></div>
                       </div>
-                      <div class="toggle toggle-min"></div>
-                      <div class="toggle toggle-max"></div>
+                      <div class="toggle toggle-min" style="left: 0"></div>
+                      <div class="toggle toggle-max" style="left: 250px"></div>
                     </div>
                   </div>
                 </fieldset>
@@ -118,7 +118,7 @@
           </div>
           <ul class="hotels-list">
             <li class="hotels-item">
-              <img class="hotels-image" src="img\Amara.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
+              <img class="hotels-image" src="img/Amara.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
               <div class="hotels-description">
                 <h3><a class="hotels-name" href="#">Amara Resort & Spa</a></h3>
                 <div class="price-wrapper">
@@ -132,16 +132,16 @@
               </div>
               <div class="rating-container">
                 <div>
-                  <img src="img\star.svg" width="18" height="17" alt="">
-                  <img src="img\star.svg" width="18" height="17" alt="">
-                  <img src="img\star.svg" width="18" height="17" alt="">
-                  <img src="img\star.svg" width="18" height="17" alt="">
+                  <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+                  <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+                  <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+                  <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
                 </div>
                 <p class="rating">Рейтинг: 8,5</p>
               </div>
             </li>
             <li class="hotels-item">
-              <img class="hotels-image" src="img\Desert.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
+              <img class="hotels-image" src="img/Desert.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
               <div class="hotels-description">
                 <h3><a class="hotels-name" href="#">Desert Quail Inn</a></h3>
                 <div class="price-wrapper">
@@ -155,15 +155,15 @@
               </div>
               <div class="rating-container">
                 <div>
-                  <img src="img\star.svg" width="18" height="17" alt="">
-                  <img src="img\star.svg" width="18" height="17" alt="">
-                  <img src="img\star.svg" width="18" height="17" alt="">
+                  <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+                  <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+                  <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
                 </div>
                 <p class="rating">Рейтинг: 8,9</p>
               </div>
             </li>
             <li class="hotels-item">
-              <img class="hotels-image" src="img\Villas.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
+              <img class="hotels-image" src="img/Villas.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
               <div class="hotels-description">
                 <h3><a class="hotels-name" href="#">Villas at Poco Diablo</a></h3>
                 <div class="price-wrapper">
@@ -177,8 +177,8 @@
               </div>
               <div class="rating-container">
                 <div>
-                  <img src="img\star.svg" width="18" height="17" alt="">
-                  <img src="img\star.svg" width="18" height="17" alt="">
+                  <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
+                  <img src="img/star.svg" width="18" height="17" alt="звезда рейтинга">
                 </div>
                 <p class="rating">Рейтинг: 9,2</p>
               </div>
