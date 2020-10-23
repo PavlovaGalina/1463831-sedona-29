@@ -513,6 +513,12 @@ input::-webkit-inner-spin-button {
   fill: var(--basic-black);
 }
 
+.calendar:focus path,
+.plus:focus path,
+.minus:focus rect {
+  fill: var(--basic-black);
+}
+
 .calendar:active path,
 .plus:active path,
 .minus:active rect {
@@ -541,7 +547,7 @@ input::-webkit-inner-spin-button {
   text-transform: uppercase;
   background-color: var(--basic-brown);
   border: none;
-  outline:none;
+  outline: none;
   padding: 30px 130px;
 }
 
@@ -555,12 +561,19 @@ input::-webkit-inner-spin-button {
   text-transform: uppercase;
   background-color: var(--basic-brown);
   border: none;
-  outline:none;
+  outline: none;
 }
 
 .modal-button:hover,
 .reservation-button:hover {
   background-color: var(--special-darker-brown);
+}
+
+.modal-button:focus,
+.reservation-button:focus {
+  background-color: var(--special-darker-brown);
+  outline: 2px solid var(--basic-black);
+  outline-offset: -2px;
 }
 
 .modal-button:active,
@@ -595,12 +608,18 @@ input::-webkit-inner-spin-button {
   text-transform: uppercase;
   background-color: var(--basic-blue);
   border: none;
-  outline:none;
+  outline: none;
 }
 
 .search-button:hover,
-.learn-more-button:hover{
+.learn-more-button:hover {
   background-color: var(--special-darker-blue);
+}
+
+.search-button:focus,
+.learn-more-button:focus {
+  background-color: var(--special-darker-blue);
+  outline: 2px solid var(--basic-black);
 }
 
 .search-button:active,
