@@ -735,6 +735,10 @@ input::-webkit-inner-spin-button {
   background-image: url(../img/checkbox-off.svg);
 }
 
+.filter-input-checkbox:focus + label::before {
+  outline: 2px solid  var(--basic-black);
+}
+
 .filter-input-checkbox:checked + label::before {
   content: "";
   position: absolute;
@@ -888,6 +892,11 @@ input::-webkit-inner-spin-button {
   background-color: var(--basic-white);
 }
 
+.show-button:focus {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
 /* Hotels */
 
 .hotels h3 {
@@ -944,6 +953,12 @@ input::-webkit-inner-spin-button {
   color: var(--basic-blue);
   opacity: 1;
   border-bottom: 1px dashed;
+}
+
+.sort-list a:focus {
+  color: var(--basic-blue);
+  opacity: 1;
+  outline: 2px solid var(--basic-black);
 }
 
 .sort-list a:active {
