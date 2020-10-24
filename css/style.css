@@ -749,6 +749,7 @@ input::-webkit-inner-spin-button {
   background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
+  outline: none;
 }
 
 .filter-input-checkbox:disabled + label::before {
@@ -971,11 +972,15 @@ input::-webkit-inner-spin-button {
 }
 
 .sort-direction a:hover path {
-  fill: var(--basic-blue);
+  fill: var(--basic-black);
+}
+
+.sort-direction a:focus path {
+  fill: var(--basic-black);
 }
 
 .sort-direction a:active path {
-  fill: var(--basic-black);
+  fill: var(--basic-blue);
 }
 
 .current-direction svg path {
