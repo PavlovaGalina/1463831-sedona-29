@@ -749,7 +749,6 @@ input::-webkit-inner-spin-button {
   background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
-  outline: none;
 }
 
 .filter-input-checkbox:disabled + label::before {
