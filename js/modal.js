@@ -18,6 +18,10 @@ try {
   isStorageSupport = false;
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  modalPopup.classList.remove("modal-show");
+  modalPopup.classList.add("modal-close");
+});
 
 modalButton.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -25,24 +29,23 @@ modalButton.addEventListener("click", function (evt) {
     modalPopup.classList.remove("modal-close");
     modalPopup.classList.add("modal-show");
 
-    if (storageAdults) {
-    localStorage.value = storageAdults;
-    }
-
-    if (storageChildren) {
-    localStorage.value = storageChildren;
-    }
-
     arrivalDate.focus();
   } else {
     modalPopup.classList.remove("modal-show");
     modalPopup.classList.add("modal-close");
+  }
+
+  if (storageAdults && storageChildren) {
+  localStorage.value = storageAdults;
+  localStorage.value = storageChildren;
   }
 });
 
 searchForm.addEventListener("submit", function (evt) {
   if (!arrivalDate.value || !leavingDate.value || !adultsNumber.value || !childrenNumber.value) {
     evt.preventDefault();
+    modalWrapper.classList.remove("modal-error");
+    modalWrapper.offsetWidth = modalWrapper.offsetWidth;
     modalWrapper.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
@@ -57,6 +60,7 @@ window.addEventListener("keydown", function (evt) {
     if (modalPopup.classList.contains("modal-show")) {
       evt.preventDefault();
       modalPopup.classList.remove("modal-show");
+      modalPopup.classList.add("modal-close");
     }
   }
 });

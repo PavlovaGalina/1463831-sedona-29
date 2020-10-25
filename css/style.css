@@ -369,6 +369,7 @@ img {
   position: relative;
   text-align: center;
   padding-top: 58px;
+  margin-bottom: -396px;
 }
 
 .hotel-search h2 {
@@ -400,17 +401,18 @@ img {
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
-.modal-wrap {
+.modal-wrapper {
   overflow: hidden;
 }
 
 .modal-show {
   display: block;
   animation: rolldown 0.6s;
+  z-index: 5;
 }
 
 .modal-close {
-  animation: rollup 0.6s;
+  animation: rollup 0.6s forwards;
 }
 
 .modal-error {
@@ -419,23 +421,24 @@ img {
 
 @keyframes rolldown {
   0% {
-    transform-origin: center 2169px;
-    transform: translateY(-395px);
+    opacity: 0;
+    transform: translateY(-100%);
   }
 
   100% {
+    opacity: 1;
     transform: translateY(0px);
   }
 }
 
 @keyframes rollup {
   0% {
-    transform-origin: center 2169px;
+    opacity: 1;
     transform: translateY(0px);
   }
 
-  100% {
-    transform: translateY(-395px);
+  100% {opacity: 0;
+    transform: translateY(-100%);
   }
 }
 
@@ -594,14 +597,15 @@ input::-webkit-inner-spin-button {
   fill: var(--basic-blue);
 }
 
-.map img {
-  width: 1200px;
+.map {
+  height: 594px;
+  background-image: url(../img/map.png);
+  background-color: var(--basic-grey);
 }
 
-.map {
-  height: 473px;
-  background-color: var(--basic-grey);
-  margin-top: -395px;
+.map iframe {
+  width: 1200px;
+  height: 594px;
 }
 
 /* Buttons */
@@ -619,7 +623,7 @@ input::-webkit-inner-spin-button {
   background-color: var(--basic-brown);
   border: none;
   outline: none;
-  z-index: 2;
+  z-index: 3;
   padding: 30px 130px;
 }
 
@@ -1152,6 +1156,11 @@ input::-webkit-inner-spin-button {
   padding: 0 73px;
   color: var(--basic-black);
   background-color: rgba(255, 255, 255, 0.9);
+  z-index: 3;
+}
+
+.main-page-footer {
+  margin-top: -120px;
 }
 
 .footer-contacts {
