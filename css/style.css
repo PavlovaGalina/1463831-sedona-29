@@ -390,7 +390,6 @@ img {
 
 .modal {
   width: 458px;
-  position: absolute;
   background-color: var(--basic-white);
   margin-left: auto;
   margin-right: auto;
@@ -401,16 +400,24 @@ img {
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
+.modal-wrap {
+  overflow: hidden;
+}
+
 .modal-show {
   display: block;
-  animation: bounce 0.6s;
+  animation: rolldown 0.6s;
 }
 
 .modal-close {
-  display: none;
+  animation: rollup 0.6s;
 }
 
-@keyframes bounce {
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes rolldown {
   0% {
     transform-origin: center 2169px;
     transform: translateY(-395px);
@@ -418,6 +425,39 @@ img {
 
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes rollup {
+  0% {
+    transform-origin: center 2169px;
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-395px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
 
@@ -561,11 +601,13 @@ input::-webkit-inner-spin-button {
 .map {
   height: 473px;
   background-color: var(--basic-grey);
+  margin-top: -395px;
 }
 
 /* Buttons */
 
 .modal-button {
+  position: relative;
   width: 568px;
   font-size: 21px;
   line-height: 26px;
@@ -577,6 +619,7 @@ input::-webkit-inner-spin-button {
   background-color: var(--basic-brown);
   border: none;
   outline: none;
+  z-index: 2;
   padding: 30px 130px;
 }
 
