@@ -403,10 +403,6 @@ img {
   z-index: 1;
 }
 
-.modal-wrapper {
-  overflow: hidden;
-}
-
 .modal-show {
   display: block;
   pointer-events: all;
