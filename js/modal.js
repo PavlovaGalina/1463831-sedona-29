@@ -29,15 +29,15 @@ modalButton.addEventListener("click", function (evt) {
     modalPopup.classList.remove("modal-close");
     modalPopup.classList.add("modal-show");
 
-    arrivalDate.focus();
+    arrivalDate.focus({preventScroll:true});
   } else {
     modalPopup.classList.remove("modal-show");
     modalPopup.classList.add("modal-close");
   }
 
   if (storageAdults && storageChildren) {
-  localStorage.value = storageAdults;
-  localStorage.value = storageChildren;
+  storageAdults.value = storageAdults;
+  storageChildren.value = storageChildren;
   }
 });
 

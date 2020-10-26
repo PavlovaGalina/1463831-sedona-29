@@ -369,7 +369,6 @@ img {
   position: relative;
   text-align: center;
   padding-top: 58px;
-  margin-bottom: -396px;
 }
 
 .hotel-search h2 {
@@ -390,6 +389,7 @@ img {
 }
 
 .modal {
+  position: absolute;
   width: 458px;
   background-color: var(--basic-white);
   margin-left: auto;
@@ -398,7 +398,9 @@ img {
   display: block;
   left: 0;
   right: 0;
+  top: 100%;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  z-index: 1;
 }
 
 .modal-wrapper {
@@ -407,11 +409,12 @@ img {
 
 .modal-show {
   display: block;
+  pointer-events: all;
   animation: rolldown 0.6s;
-  z-index: 5;
 }
 
 .modal-close {
+  pointer-events: none;
   animation: rollup 0.6s forwards;
 }
 
@@ -1156,7 +1159,7 @@ input::-webkit-inner-spin-button {
   padding: 0 73px;
   color: var(--basic-black);
   background-color: rgba(255, 255, 255, 0.9);
-  z-index: 3;
+  z-index: 1;
 }
 
 .main-page-footer {
