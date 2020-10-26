@@ -389,8 +389,8 @@ img {
 }
 
 .modal {
-  width: 458px;
   position: absolute;
+  width: 458px;
   background-color: var(--basic-white);
   margin-left: auto;
   margin-right: auto;
@@ -398,15 +398,73 @@ img {
   display: block;
   left: 0;
   right: 0;
+  top: 100%;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  z-index: 1;
+}
+
+.modal-wrapper {
+  overflow: hidden;
 }
 
 .modal-show {
   display: block;
+  pointer-events: all;
+  animation: rolldown 0.6s;
 }
 
 .modal-close {
-  display: none;
+  pointer-events: none;
+  animation: rollup 0.6s forwards;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes rolldown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes rollup {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  100% {opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 .hotel-search-form,
@@ -542,18 +600,21 @@ input::-webkit-inner-spin-button {
   fill: var(--basic-blue);
 }
 
-.map img {
-  width: 1200px;
+.map {
+  height: 594px;
+  background-image: url(../img/map.png);
+  background-color: var(--basic-grey);
 }
 
-.map {
-  height: 473px;
-  background-color: var(--basic-grey);
+.map iframe {
+  width: 1200px;
+  height: 594px;
 }
 
 /* Buttons */
 
 .modal-button {
+  position: relative;
   width: 568px;
   font-size: 21px;
   line-height: 26px;
@@ -565,6 +626,7 @@ input::-webkit-inner-spin-button {
   background-color: var(--basic-brown);
   border: none;
   outline: none;
+  z-index: 3;
   padding: 30px 130px;
 }
 
@@ -1097,6 +1159,11 @@ input::-webkit-inner-spin-button {
   padding: 0 73px;
   color: var(--basic-black);
   background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+}
+
+.main-page-footer {
+  margin-top: -120px;
 }
 
 .footer-contacts {
