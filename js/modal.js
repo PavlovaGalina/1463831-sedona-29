@@ -36,8 +36,8 @@ modalButton.addEventListener("click", function (evt) {
   }
 
   if (storageAdults && storageChildren) {
-    storageAdults.value = storageAdults;
-    storageChildren.value = storageChildren;
+  storageAdults.value = storageAdults;
+  storageChildren.value = storageChildren;
   }
 });
 
@@ -49,8 +49,8 @@ searchForm.addEventListener("submit", function (evt) {
     modalWrapper.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
-      storageAdults.setItem("adults", adultsNumber.value);
-      storageChildren.setItem("children", childrenNumber.value);
+    localStorage.setItem("adults", adultsNumber.value);
+    localStorage.setItem("children", childrenNumber.value);
    }
   }
 });
