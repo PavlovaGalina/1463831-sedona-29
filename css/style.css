@@ -3,8 +3,8 @@
   font-style: normal;
   font-weight: 400;
   src: local("PT Sans"), local("PTSans"),
-    url("../fonts/PTSans.woff2") format("woff2"),
-    url("../fonts/PTSans.woff") format("woff");
+    url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
   font-display: swap;
 }
 
@@ -13,8 +13,9 @@
   font-style: normal;
   font-weight: 700;
   src: local("PT Sans Bold"), local("PTSans-Bold"),
-    url("../fonts/PTSans-Bold.woff2") format("woff2"),
-    url("../fonts/PTSans-Bold.woff") format("woff");
+    url("../fonts/ptsans-bold.woff2") format("woff2"),
+    url("../fonts/ptsans-bold.woff") format("woff");
+  font-display: swap;
 }
 
 /* Variables */
@@ -33,11 +34,14 @@
   --special-darker-brown: #604E43;
   --special-dark-brown: #503E33;
   --special-white: rgba(255, 255, 255, 0.3);
+  --special-white-footer: rgba(255, 255, 255, 0.9);
   --special-grey: #E5E5E5;
   --special-grey-input: #EBEBEB;
   --special-grey-sort: #CACACA;
   --special-grey-search: #A9A9A9;
   --special-grey-toggle: #ABABAB;
+  --main-shadow: rgba(0, 1, 1, 0.2);
+  --shadow: rgba(0, 1, 1, 0.15);
 }
 
 /* Global */
@@ -75,7 +79,7 @@ img {
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   margin: 0 auto;
-  box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+  box-shadow: 0 5px 15px 0 var(--main-shadow);
 }
 
 .visually-hidden {
@@ -409,7 +413,7 @@ img {
   left: 0;
   right: 0;
   top: 100%;
-  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0 7px 15px var(--shadow);
   z-index: 1;
 }
 
@@ -1194,7 +1198,7 @@ img {
   margin: 0 auto;
   padding: 0 73px;
   color: var(--basic-black);
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--special-white-footer);
   z-index: 1;
 }
 
