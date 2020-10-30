@@ -194,7 +194,7 @@ img {
   display: flex;
   flex-direction: column;
   background-color: var(--basic-blue);
-  background-image: url(../img/shape-background-photo.svg);
+  background-image: url(../img/background-photo.jpg);
   background-position: top;
   background-repeat: no-repeat;
   text-align: center;
